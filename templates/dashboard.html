@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <div class="icon">🗄️</div>
+    <h2>Vault Dashboard</h2>
+
+    <form action="/create_vault">
+        <button>➕ Create Vault</button>
+    </form>
+
+    <br>
+
+    <form action="/open_vault">
+        <button>🔑 Open Vault</button>
+    </form>
+
+    <br>
+
+    <a href="/logout">🚪 Logout</a>
+</div>
+
+</body>
+</html>

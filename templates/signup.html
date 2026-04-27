@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <div class="icon">🔓</div>
+    <h2>Create Secure Account</h2>
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Create Vault Account</button>
+    </form>
+
+    <p style="text-align:center;">
+        <a href="/login">Back to Login</a>
+    </p>
+</div>
+
+</body>
+</html>

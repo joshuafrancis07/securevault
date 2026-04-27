@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>Your Vault Files</h2>
+
+    <form action="/upload/{{ vault_id }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload File</button>
+    </form>
+
+    <hr>
+
+    {% for file in files %}
+        <p>
+            {{ file }} <br>
+            <a href="/view/{{ vault_id }}/{{ file }}">View</a> |
+            <a href="/download/{{ vault_id }}/{{ file }}">Download</a> |
+            <a href="/delete/{{ vault_id }}/{{ file }}">Delete</a>
+        </p>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

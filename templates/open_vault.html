@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Vault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🔓 Your Vaults</h2>
+
+    <div class="vault-grid">
+        {% for vault in vaults %}
+            <div class="vault-card">
+                <h3>{{ vault['vault_name'] }}</h3>
+                <a href="/open_vault/{{ vault['_id'] }}">Open</a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a href="/dashboard" class="back-btn">⬅ Back</a>
+</div>
+
+</body>
+</html>

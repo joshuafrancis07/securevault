@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Vault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🔐 Create Your Vault</h2>
+
+    <form method="POST" class="card">
+        <label>Vault Name</label>
+        <input type="text" name="vault_name" placeholder="Enter vault name" required>
+
+        <label>Password</label>
+        <input type="password" name="vault_password" placeholder="Enter password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" placeholder="Confirm password" required>
+
+        <button type="submit">Create Vault</button>
+    </form>
+
+    <a href="/dashboard" class="back-btn">⬅ Back</a>
+</div>
+
+</body>
+</html>
